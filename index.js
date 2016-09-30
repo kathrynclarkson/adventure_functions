@@ -1,43 +1,38 @@
 /*
-	Below is a small script which generates random adventures. There are two
-	problems which are marked below with "TODO". Your assignment is to solve
-	those TODOs and get this script really up to snuff.
-	*/
+Below is a small script which generates random adventures. There are two
+problems which are marked below with "TODO". Your assignment is to solve
+those TODOs and get this script really up to snuff.
+*/
 
-	function runGame() {
-		var monsters = [
-		"dragon",
-		"troll",
-		"alien mothership",
-		"illithid"
-		];
+function runGame() {
+	var monsters = [
+	"dragon",
+	"troll",
+	"alien mothership",
+	"illithid"
+	];
 
-		var weapons = [
-		"deadly dagger",
-		"artful axe",
-		"skillful swordplay",
-		"menacing mace"
-		];
+	var weapons = [
+	"deadly dagger",
+	"artful axe",
+	"skillful swordplay",
+	"menacing mace"
+	];
 
-		var actions = [
-		"defeated",
-		"attacked",
-		"ran from",
-		"talked to"
-		];
+	var actions = [
+	"defeated",
+	"attacked",
+	"ran from",
+	"talked to"
+	];
 
-		var heroGender;
-		if (Math.random() < 0.5) {
-			heroGender = "heroine";
-		} else {
-			heroGender = "hero";
-		}
+	var heroGender;
+	if (Math.random() < 0.5) {
+		heroGender = "heroine";
+	} else {
+		heroGender = "hero";
+	}
 
-/*
-	TODO: The following three lines of code have a lot of repetition and are
-	ripe for turning into a function! Create a function to handle choosing
-	a random element from an array instead of doing the math each time.
-	*/
 	function pickRandomThing(thing) {
 		return thing[Math.floor(Math.random() * thing.length)];
 	}
